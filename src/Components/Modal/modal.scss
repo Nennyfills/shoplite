@@ -1,0 +1,141 @@
+.modal {
+  div:first-child {
+    justify-content: flex-end !important;
+    div:nth-child(2) {
+      background-color: #fbfbfbb3 !important;
+    }
+  }
+  .close-modal {
+    position: absolute;
+    top: 35px;
+    left: 2em;
+    border: 1px solid #1e2d2b;
+    background: none;
+    border-radius: 1em;
+    background-color: #f2f2ef;
+    font-size: 16px;
+    cursor: pointer;
+    color: #1e2d2b;
+  }
+  .title {
+    color: #696969;
+    font-weight: 400;
+    font-family: FF Bau Medium;
+    letter-spacing: 1px;
+    font-style: normal;
+    font-size: 18px;
+    text-align: center;
+    margin: 1.5em auto;
+    line-height: 1.2;
+  }
+  .filter {
+    width: 36%;
+    select {
+      margin-left: 2em;
+      border: none;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    }
+  }
+
+  .modal-footer {
+    color: #1e2d2b;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -5px 3px -3px #ccc, 0 5px 3px -3px #ccc;
+    background-color: #f2f2ef;
+    text-align: center;
+
+    .top {
+      display: flex;
+      padding: 2em;
+      justify-content: space-between !important;
+      align-items: center;
+      h4 {
+        font-size: 12px;
+      }
+      side {
+        font-size: 18px;
+      }
+    }
+    .bottom {
+      padding: 2em;
+      button {
+        width: 100%;
+      }
+    }
+  }
+  .modal-body {
+    color: #1e2d2b;
+    margin: 2em;
+    height: 37em;
+    overflow-y: auto;
+    .close {
+      display: flex;
+      justify-content: flex-end !important;
+      margin-bottom: 1em;
+    }
+    .close-card {
+      border: none;
+      background: transparent;
+      font-size: 18px;
+      color: #1e2d2b;
+      cursor: pointer;
+    }
+    .inner {
+      background-color: #fff;
+      padding: 2em;
+      margin: 1em;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      .top {
+        display: flex;
+        justify-content: space-between;
+        .top-1 {
+          color: #1e2d2b;
+          margin-bottom: 0;
+          letter-spacing: 0.03px;
+          padding: 0;
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+          line-height: 1.5;
+          h4 {
+            font-size: 18px;
+          }
+          p {
+            font-size: 13px;
+          }
+        }
+      }
+      img {
+        width: 8rem;
+        height: 10em;
+        background-size: cover;
+      }
+      .box {
+        padding: 0 0.6em;
+        border: 1px solid #232222;
+        display: flex;
+        justify-content: space-around !important;
+        width: 4em;
+        button,
+        h4 {
+          margin: 0.5em;
+        }
+        button {
+          cursor: pointer;
+          font-size: 1em;
+          border: none;
+          background-color: transparent;
+        }
+      }
+
+      .bottom {
+        width: 50%;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+      }
+    }
+  }
+}

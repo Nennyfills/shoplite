@@ -1,0 +1,53 @@
+.card-loader {
+  position: relative;
+  background-color: #e3e6e3;
+  border-radius: 1px;
+  overflow: hidden;
+  width: 350px;
+  margin: 40px auto;
+
+  .shimmer {
+    animation-duration: 2.2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: shimmer;
+    animation-timing-function: linear;
+    background: rgb(235, 231, 231);
+    background: linear-gradient(to right, #f5f9f5 8%, #eceeec 18%, #f5f9f3 33%);
+    background-size: 1200px 100%;
+  }
+
+  @-webkit-keyframes shimmer {
+    0% {
+      background-position: -100% 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -1200px 0;
+    }
+    100% {
+      background-position: 1200px 0;
+    }
+  }
+
+  .img {
+    height: 200px;
+    margin: 1em;
+  }
+
+  .p-32 {
+    padding: 32px;
+  }
+
+  .title-line {
+    height: 50px;
+    width: 100%;
+    margin-bottom: 12px;
+    border-radius: 1px;
+  }
+}

@@ -1,0 +1,9 @@
+export const HANDLE_MODAL = 'handle-modal';
+export const ADD_ITEM = 'add-item';
+export const PRODUCT_LIST = 'product-list';
+export const INCREMENT = 'increment';
+export const DECREMENT = 'decrement';
+export const RESET = 'reset';
+export const GET_TOTAL = 'get-total';
+export const REMOVE_ITEM = 'removed-item';
+export const CHANGE_CURRENCY = 'change-currency';

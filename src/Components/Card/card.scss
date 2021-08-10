@@ -1,0 +1,30 @@
+.card {
+  text-align: center;
+  margin: 40px auto;
+  padding: 0.5em;
+  background-color: #e3e6e3;
+  color: #5d5f5d;
+  width: 320px;
+  .img {
+    margin: auto;
+    margin-bottom: 2em;
+    object-fit: contain;
+    img {
+      width: 60%;
+      height: 10em;
+    }
+  }
+  .desc {
+    text-transform: capitalize;
+    h6 {
+      margin-bottom: 0.4em;
+    }
+    h4 {
+      margin-top: 0.4em;
+    }
+  }
+  .card-btn {
+    display: flex;
+    justify-content: center;
+  }
+}

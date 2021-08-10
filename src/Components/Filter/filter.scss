@@ -1,0 +1,15 @@
+.filter {
+  width: 20em;
+  select {
+    width: 100%;
+    font-size: 1rem;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png)
+      no-repeat 95%;
+    padding: 1em 1em;
+  }
+}

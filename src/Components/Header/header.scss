@@ -1,0 +1,33 @@
+.header {
+  margin-top: 0.2em;
+  background-color: #fcfcfa;
+
+  padding: 1px 0;
+  font-size: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 -5px 3px -3px #ccc, 0 5px 3px -3px #ccc;
+  .header-left,
+  .header-right {
+    margin: 0 1em;
+    display: flex;
+    align-items: center;
+    ul {
+      overflow-x: hidden;
+      white-space: nowrap;
+      width: 100%;
+
+      li {
+        display: inline;
+        margin-right: 1rem;
+        list-style-type: none;
+        .cart-nums {
+          font-size: 14px;
+          position: absolute;
+          top: 1.5em;
+        }
+      }
+    }
+  }
+}
