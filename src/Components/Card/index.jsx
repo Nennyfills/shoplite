@@ -8,7 +8,7 @@ import './card.scss';
 const Card = ({ src, title, currency, price, btnName, btnOnClick }) => {
   return (
     <>
-      <div className="card" data-test='card'>
+      <div className="card" data-test="card">
         <div className="img">
           <img src={src} alt="Product" />
         </div>
@@ -16,7 +16,7 @@ const Card = ({ src, title, currency, price, btnName, btnOnClick }) => {
           <h6>{title}</h6>
           <h4>
             from {currency}
-            <span>{price}</span>
+            <span>{price?.toFixed(2)}</span>
           </h4>
         </div>
         <div className="card-btn">

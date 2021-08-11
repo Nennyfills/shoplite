@@ -1,10 +1,30 @@
-.modal {
-  div:first-child {
-    justify-content: flex-end !important;
-    div:nth-child(2) {
-      background-color: #fbfbfbb3 !important;
-    }
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #ececefc7;
+  top: 0;
+  left: 0;
+}
+.undo-overlay {
+  visibility: visible;
+  opacity: 1;
+}
+.side-drawer {
+  height: 100%;
+  background: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 200;
+  box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-out;
+  &.open {
+    transform: translateX(0);
   }
+
   .close-modal {
     position: absolute;
     top: 35px;
@@ -29,7 +49,7 @@
     line-height: 1.2;
   }
   .filter {
-    width: 36%;
+    width: 47%;
     select {
       margin-left: 2em;
       border: none;
@@ -53,9 +73,9 @@
       justify-content: space-between !important;
       align-items: center;
       h4 {
-        font-size: 12px;
+        font-size: 16px;
       }
-      side {
+      h5 {
         font-size: 18px;
       }
     }
@@ -68,8 +88,8 @@
   }
   .modal-body {
     color: #1e2d2b;
-    margin: 2em;
-    height: 37em;
+    // margin: 2em;
+    height: 14em;
     overflow-y: auto;
     .close {
       display: flex;
@@ -100,24 +120,24 @@
           -webkit-font-smoothing: antialiased;
           line-height: 1.5;
           h4 {
-            font-size: 18px;
+            font-size: 14px;
           }
           p {
-            font-size: 13px;
+            font-size: 12px;
           }
         }
       }
       img {
-        width: 8rem;
-        height: 10em;
+        width: 4rem;
+        height: 3em;
         background-size: cover;
       }
       .box {
-        padding: 0 0.6em;
+        padding: 0 0.8em;
         border: 1px solid #232222;
         display: flex;
         justify-content: space-around !important;
-        width: 4em;
+        width: 6em;
         button,
         h4 {
           margin: 0.5em;
@@ -131,11 +151,38 @@
       }
 
       .bottom {
-        width: 50%;
+        width: 100%;
         display: flex;
         align-items: baseline;
         justify-content: space-between;
       }
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .side-drawer {
+    width: 40%;
+    .filter {
+      width: 36%;
+    }
+    .top-1 {
+      h4 {
+        font-size: 18px;
+      }
+      p {
+        font-size: 13px;
+      }
+    }
+    img {
+      width: 8rem;
+      height: 10em;
+      background-size: cover;
+    }
+    .modal-body {
+      height: 36em;
+    }
+    .bottom {
+      width: 50%;
     }
   }
 }

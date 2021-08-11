@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Filter from 'Components/Filter';
-import Modal from 'react-awesome-modal';
 import ModalBody from './Body';
 import ModalFooter from './Footer';
 
@@ -24,8 +23,13 @@ const LuminModal = ({
   getTotal,
 }) => {
   return (
-    <section className="modal" data-test="lumin-modal">
-      <Modal visible={visible} width="700" height="1000" effect="fadeInRight">
+    <div
+      data-test="lumin-modal"
+      className={visible ? 'overlay' : 'undo-overlay'}
+    >
+      <div
+        className={`side-drawer ${visible ? 'open' : ''}`}
+      >
         <h1 className="title">{title}</h1>
         <button className="close-modal" onClick={closeModal}>
           <i className="fas fa-angle-right"></i>
@@ -37,18 +41,20 @@ const LuminModal = ({
             onChange={(event) => currencyChange(event.target.value)}
           />
         </div>
-        <ModalBody
-          cart={cart}
-          cached={cached}
-          currencies={currencies}
-          handleDecrease={handleDecrease}
-          handleIncrease={handleIncrease}
-          handleRemoveItem={handleRemoveItem}
-          getTotal={getTotal}
-        />
+        <div className="modal-content">
+          <ModalBody
+            cart={cart}
+            cached={cached}
+            currencies={currencies}
+            handleDecrease={handleDecrease}
+            handleIncrease={handleIncrease}
+            handleRemoveItem={handleRemoveItem}
+            getTotal={getTotal}
+          />
+        </div>
         <ModalFooter currencies={currencies} total={total} />
-      </Modal>
-    </section>
+      </div>
+    </div>
   );
 };
 
@@ -57,7 +63,7 @@ LuminModal.defaultProps = {
   cart: [],
   cached: {},
   currencies: 'NGN',
-  total: 0,
+  total: '0',
   visible: false,
   title: '',
 };
@@ -71,7 +77,7 @@ LuminModal.propTypes = {
   cart: PropTypes.array,
   cached: PropTypes.object,
   currencies: PropTypes.string,
-  total: PropTypes.number,
+  total: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
   visible: PropTypes.bool,
 };

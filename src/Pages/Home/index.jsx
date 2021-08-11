@@ -39,6 +39,7 @@ const Home = () => {
         showModal={showModal}
         addAction={handleAddItem}
         getTotal={handleGetTotal}
+        currency={currencies}
       />
       {
         <LuminModal

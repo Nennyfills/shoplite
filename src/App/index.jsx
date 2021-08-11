@@ -4,7 +4,6 @@ import { ContextWrapper } from 'Utils/Store';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
 import Header from 'Components/Header';
-import Footer from 'Components/Footer';
 
 import Routes from './Routes';
 import './app.scss';
@@ -20,7 +19,6 @@ const App = () => {
         <div className="app" data-test="app">
           <Header />
           <Routes />
-          {/* <Footer /> */}
         </div>
       </ContextWrapper>
     </ApolloProvider>

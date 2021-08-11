@@ -10,7 +10,7 @@ const ModalFooter = ({ currencies, total, onClick }) => {
       <div></div>
       <section className="top">
         <h4>Subtotal</h4>
-        <side>{`${currencies} ${total}`}</side>
+        <h5>{`${currencies} ${total}`}</h5>
       </section>
       <section className="bottom">
         <Button name="Proceed To CheckOut" onClick={onClick} />
@@ -20,13 +20,13 @@ const ModalFooter = ({ currencies, total, onClick }) => {
 };
 
 ModalFooter.defaultProps = {
-  total: 0,
+  total: '0',
   currencies: 'NGN',
   onClick: () => '',
 };
 
 ModalFooter.propTypes = {
-  total: PropTypes.number,
+  total: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   currencies: PropTypes.string,
   onClick: PropTypes.func,
 };

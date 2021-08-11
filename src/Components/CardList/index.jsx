@@ -6,7 +6,7 @@ import CardLoader from 'Components/CardLoader';
 
 import './cardList.scss';
 
-const CardList = ({ products, loading, getTotal, addAction }) => {
+const CardList = ({ products, loading, getTotal, addAction, currency }) => {
   return (
     <div className="card-list" data-test="card-list">
       <div className="list-1">
@@ -21,7 +21,7 @@ const CardList = ({ products, loading, getTotal, addAction }) => {
                 <Card
                   src={item.image_url}
                   title={item.title}
-                  currency={'$'}
+                  currency={currency}
                   price={item.price}
                   btnName={'Add to Cart'}
                   btnOnClick={() => {
@@ -39,6 +39,7 @@ const CardList = ({ products, loading, getTotal, addAction }) => {
 CardList.defaultProps = {
   loading: true,
   products: [],
+  currency: "NGN"
 };
 
 CardList.propTypes = {
@@ -46,6 +47,7 @@ CardList.propTypes = {
   addAction: PropTypes.func.isRequired,
   products: PropTypes.array,
   loading: PropTypes.bool,
+  currency: PropTypes.string
 };
 
 export default CardList;
