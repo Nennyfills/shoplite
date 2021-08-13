@@ -5,6 +5,7 @@
   background: #ececefc7;
   top: 0;
   left: 0;
+  z-index: 10;
 }
 .undo-overlay {
   visibility: visible;
@@ -12,7 +13,7 @@
 }
 .side-drawer {
   height: 100%;
-  background: white;
+  background: #f2f2ef;
   position: fixed;
   top: 0;
   right: 0;
@@ -49,9 +50,10 @@
     line-height: 1.2;
   }
   .filter {
-    width: 47%;
     select {
-      margin-left: 2em;
+      width: 30%;
+      margin-left: 1em;
+      background-color: #fff;
       border: none;
       box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     }
@@ -63,13 +65,14 @@
     left: 0;
     bottom: 0;
     width: 100%;
+    height: 22%;
     box-shadow: 0 -5px 3px -3px #ccc, 0 5px 3px -3px #ccc;
     background-color: #f2f2ef;
     text-align: center;
 
     .top {
       display: flex;
-      padding: 2em;
+      padding: 0.5em 2em;
       justify-content: space-between !important;
       align-items: center;
       h4 {
@@ -79,21 +82,27 @@
         font-size: 18px;
       }
     }
+    h4,
+    h5 {
+      margin: 0.7em;
+    }
     .bottom {
-      padding: 2em;
+      padding: 0.5em 2em;
       button {
         width: 100%;
       }
     }
   }
+  .modal-content {
+    overflow-y: auto;
+    height: calc(77% - 22%);
+  }
   .modal-body {
     color: #1e2d2b;
-    // margin: 2em;
-    height: 14em;
-    overflow-y: auto;
+    margin: 1em;
     .close {
       display: flex;
-      justify-content: flex-end !important;
+      justify-content: flex-end;
       margin-bottom: 1em;
     }
     .close-card {
@@ -103,10 +112,11 @@
       color: #1e2d2b;
       cursor: pointer;
     }
+
     .inner {
       background-color: #fff;
-      padding: 2em;
-      margin: 1em;
+      padding: 1em;
+      margin-top: 1em;
       box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
       .top {
         display: flex;
@@ -136,7 +146,7 @@
         padding: 0 0.8em;
         border: 1px solid #232222;
         display: flex;
-        justify-content: space-around !important;
+        justify-content: space-around;
         width: 6em;
         button,
         h4 {
@@ -162,9 +172,6 @@
 @media screen and (min-width: 768px) {
   .side-drawer {
     width: 40%;
-    .filter {
-      width: 36%;
-    }
     .top-1 {
       h4 {
         font-size: 18px;
@@ -177,12 +184,6 @@
       width: 8rem;
       height: 10em;
       background-size: cover;
-    }
-    .modal-body {
-      height: 36em;
-    }
-    .bottom {
-      width: 50%;
     }
   }
 }
